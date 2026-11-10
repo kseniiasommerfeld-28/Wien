@@ -101,7 +101,6 @@
     <button data-day="freitag">Freitag<small>13. November</small></button>
   </nav>
   <main id="app"></main>
-  <details><summary>Was sonst noch auf meiner Liste steht</summary><div class="rest" id="rest"></div></details>
   <footer><div id="note"></div><button id="reset">Häkchen zurücksetzen</button></footer>
 </div>
 <script>
@@ -400,7 +399,6 @@ function render(key){
   });
   document.getElementById("app").innerHTML=h;
 }
-document.getElementById("rest").innerHTML=REST.map(g=>`<h4 class="sc">${g[0]}</h4><ul>${g[1].map(e=>`<li><b>${esc(e[0])}</b>${e[2]?". "+esc(e[2]):""} ${addr(e[0],e[1])}</li>`).join("")}</ul>`).join("");
 document.getElementById("note").textContent=NOTE;
 startApp(render);
 </script>
