@@ -101,7 +101,6 @@
     <button data-day="freitag">Freitag<small>13. November</small></button>
   </nav>
   <main id="app"></main>
-  <footer><div id="note"></div><button id="reset">Häkchen zurücksetzen</button></footer>
 </div>
 <script>
 // k: "fix" | "opt" | "walk" | "hotel"
@@ -399,7 +398,6 @@ function render(key){
   });
   document.getElementById("app").innerHTML=h;
 }
-document.getElementById("note").textContent=NOTE;
 startApp(render);
 </script>
 </body>
